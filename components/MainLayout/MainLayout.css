@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'rickandmorty';
+    src: url('../../src/assets/fonts/get_schwifty.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'rickandmorty', Arial, Helvetica, sans-serif;
+}
+
+.background {
+    display: flex;
+    height: 100vh;
+    background-image: url('../../src/assets/img/rick_morty_background.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    align-items: center;
+
+}

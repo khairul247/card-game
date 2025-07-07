@@ -1,0 +1,25 @@
+
+.cardContainer {
+    margin: 0 auto;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.card {
+    padding: 1rem;
+    background-color: white;
+    --width: 15rem;
+    --height: calc(var(--width)*1.1);
+    width: var(--width);
+    height: var(--height);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cardImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
