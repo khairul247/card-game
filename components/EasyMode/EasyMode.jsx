@@ -8,7 +8,7 @@ export default function EasyMode(){
 
     useEffect(()=>{
         const fetchCharacters = async () => {
-        const response = await fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5');
+        const response = await fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12');
         const data = await response.json();
 
         const characterCards = data.map(character => ({

@@ -6,6 +6,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     padding: 2rem;
+    height: 100vh;
 }
 
 @media (max-width: 1450px) {
