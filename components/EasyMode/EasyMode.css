@@ -10,7 +10,7 @@
     padding: 1rem;
     background-color: white;
     --width: 15rem;
-    --height: calc(var(--width)*1.2);
+    --height: calc(var(--width)*1.3);
     width: var(--width);
     height: var(--height);
     border-radius: 1rem;
@@ -30,4 +30,5 @@
 .cardName {
     text-align: center;
     font-size: large;
+    margin-bottom: 1rem;
 }
