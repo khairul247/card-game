@@ -1,7 +1,6 @@
 
 .cardContainer {
     margin: 0 auto;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     gap: 3rem;
@@ -11,15 +10,24 @@
     padding: 1rem;
     background-color: white;
     --width: 15rem;
-    --height: calc(var(--width)*1.1);
+    --height: calc(var(--width)*1.2);
     width: var(--width);
     height: var(--height);
     border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .cardImage {
+    border: 1px grey solid;
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cardName {
+    text-align: center;
+    font-size: large;
 }
