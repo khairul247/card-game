@@ -74,6 +74,12 @@ export default function EasyMode(){
                     </Tilt> 
                 ))}
             </div> 
+            {/* <div className="popup-overlay">
+                <div className="popup">
+                    <h3>You Won!</h3>
+                    <button> Close</button>
+                </div>
+            </div> */}
         </main> 
     )
 }
