@@ -4,7 +4,7 @@ import "./MainLayout.css"
 
 export default function MainLayout () {
     return (
-        <div className="background">
+        <div>
             {/* <Homepage /> */}
             <EasyMode />
         </div>

@@ -1,3 +1,18 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px red solid;
+    min-height: fit-content;
+    padding: 2rem;
+
+}
+
+.scoreboard {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
 
 .cardContainer {
     margin: 0 auto;
@@ -6,12 +21,24 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     padding: 2rem;
-    height: 100vh;
+    border: 1px red solid;
 }
 
 @media (max-width: 1450px) {
     .cardContainer {
        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 1050px) {
+    .cardContainer {
+       grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 750px) {
+    .cardContainer {
+       grid-template-columns: repeat(1, 1fr); 
     }
 }
 
@@ -39,6 +66,6 @@
 
 .cardName {
     text-align: center;
-    font-size: large;
+    font-size: x-large;
     margin-bottom: 1rem;
 }
