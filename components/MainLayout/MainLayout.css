@@ -22,3 +22,14 @@ body{
     padding: 0;
 }
 
+.mainLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    min-height: fit-content;
+    padding: 2rem;
+}
+

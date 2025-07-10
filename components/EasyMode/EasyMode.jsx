@@ -2,11 +2,11 @@ import "./EasyMode.css"
 import Tilt from 'react-parallax-tilt'
 import {useState, useEffect} from 'react'
 
-export default function EasyMode(){
+export default function EasyMode({setShowHome}){
 
     const [cards, setCards] = useState([]);
     const [score, setScore] = useState(0);
-    const [showPopup, setShowPopup] = useState(false)
+    const [showPopup, setShowPopup] = useState(false);
 
     useEffect(()=>{
         const fetchCharacters = async () => {
@@ -65,6 +65,17 @@ export default function EasyMode(){
         })
     }
 
+    function resetGame() {
+        setScore(0);
+        setShowPopup(false);
+
+        setCards(prevCards => {
+            const resetCards = prevCards.map(card => ({...card, isClicked:false}));
+
+            return shuffleCards(resetCards);
+        });
+    }
+
     return (
        <main>
             <div className="scoreboard"> Score : {score} </div>
@@ -81,8 +92,11 @@ export default function EasyMode(){
             {showPopup && (
                 <div className="popup-overlay">
                     <div className="popup">
-                        <h3>Your highest score: {score}</h3>
-                        <button> Play again!</button>
+                        <h3>Your Best Score: {score}</h3>
+                        <div className="popupButtonContainer">
+                            <button onClick={()=>resetGame()}> PlAY AGAIN!</button>
+                            <button onClick={()=>setShowHome(true)}> GO TO HOMEPAGE</button>
+                        </div>
                     </div>
                 </div>
             )}
