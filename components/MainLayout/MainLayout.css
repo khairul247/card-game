@@ -13,7 +13,7 @@
 }
 
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../src/assets/img/rick_morty_background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/img/rick_morty_background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
