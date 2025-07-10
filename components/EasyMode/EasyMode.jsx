@@ -6,6 +6,7 @@ export default function EasyMode(){
 
     const [cards, setCards] = useState([]);
     const [score, setScore] = useState(0);
+    const [showPopup, setShowPopup] = useState(false)
 
     useEffect(()=>{
         const fetchCharacters = async () => {
@@ -44,6 +45,9 @@ export default function EasyMode(){
 
         if (clickedCard && !clickedCard.isClicked){
             setScore(prevScore => prevScore + 1);
+        } else if (clickedCard && clickedCard.isClicked){
+            setShowPopup(true);
+            return;
         }
 
         setCards(prevCards => {
@@ -74,12 +78,14 @@ export default function EasyMode(){
                     </Tilt> 
                 ))}
             </div> 
-            {/* <div className="popup-overlay">
-                <div className="popup">
-                    <h3>You Won!</h3>
-                    <button> Close</button>
+            {showPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <h3>Your highest score: {score}</h3>
+                        <button> Play again!</button>
+                    </div>
                 </div>
-            </div> */}
+            )}
         </main> 
     )
 }
